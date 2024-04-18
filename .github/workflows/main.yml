@@ -5,11 +5,11 @@ on:
     branches:
       - main
 permissions:
-        id-token: arn:aws:iam::891377329120:role/github-actions-deploy 
-        contents: read
+  contents: read
+  id-token: write
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: Amazon Linux 2023 AMI 2023.4.20240416.0 x86_64 HVM kernel-6.1
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
